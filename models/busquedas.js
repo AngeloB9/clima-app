@@ -10,7 +10,16 @@ class Busquedas {
   async ciudad(lugar = '') {
     //petición http
 
-    console.log('ciudad', lugar);
+    //console.log('ciudad', lugar);
+
+    try {
+      const resp = await axios.get('https://reqres.in/api/users?page=2');
+      console.log(resp.data);
+      return [];
+    } catch (error) {
+      console.log('No se encontró nada');
+      return [];
+    }
 
     return []; //retornar los lugares que coincidan con el valor recibido como párametro
   }
