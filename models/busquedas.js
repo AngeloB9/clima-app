@@ -7,13 +7,28 @@ class Busquedas {
     //TODO: leer DB si existe una
   }
 
+  get paramsMapbox() {
+    return {
+      access_token: process.env.MAPBOX_KEY,
+      limit: 5,
+      language: 'es',
+    };
+  }
+
   async ciudad(lugar = '') {
     //petición http
 
     //console.log('ciudad', lugar);
 
     try {
-      const resp = await axios.get('https://reqres.in/api/users?page=2');
+      const intance = axios.create({
+        baseURL: `https://api.mapbox.com/geocoding/v5/mapbox.places/${lugar}.json`,
+        params: this.paramsMapbox,
+      });
+
+      const resp = await intance.get();
+
+      // const resp = await axios.get('');
       console.log(resp.data);
       return [];
     } catch (error) {
