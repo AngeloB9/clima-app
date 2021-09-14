@@ -1,0 +1,28 @@
+{
+  "name": "05-clima-app",
+  "version": "1.0.0",
+  "description": "Aplicacion de consola para consultar el clima en alguna ciudad",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/AngeloB9/clima-app.git"
+  },
+  "keywords": [
+    "NodeJS",
+    "JavaScript",
+    "WeatherMaps"
+  ],
+  "author": "Angelo Benavidez <benavidezangelo9@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/AngeloB9/clima-app/issues"
+  },
+  "homepage": "https://github.com/AngeloB9/clima-app#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "inquirer": "^8.1.3"
+  }
+}
